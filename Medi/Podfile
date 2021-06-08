@@ -9,6 +9,7 @@ target 'Medi' do
   pod 'Firebase/Firestore'
   pod 'FirebaseFirestoreSwift'
   pod 'TesseractOCRiOS'
+  pod 'GPUImage'
   # Pods for Medi
 
 end

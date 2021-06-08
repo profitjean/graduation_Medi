@@ -74,6 +74,7 @@ extension SaveVC {
         cautionTextView.textColor = UIColor.lightGray
         cautionTextView.layer.borderWidth = 1.0
         cautionTextView.layer.cornerRadius = 8.0
+        cautionTextView.layer.borderColor = CGColor.init(red: 192, green: 192, blue: 192, alpha: 0.3)
     }
     
     func setNavigationLayout() {
