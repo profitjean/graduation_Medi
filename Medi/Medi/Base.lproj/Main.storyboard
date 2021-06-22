@@ -120,7 +120,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LBQ-m9-gzr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3627.6923076923076" y="-368.2464454976303"/>
+            <point key="canvasLocation" x="2715" y="901"/>
         </scene>
         <!--Text SearchVC-->
         <scene sceneID="jiy-cS-RBS">
@@ -233,7 +233,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ze7-x4-3ct" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2886.1538461538462" y="900.71090047393363"/>
+            <point key="canvasLocation" x="1915" y="901"/>
         </scene>
         <!--Search ResultVC-->
         <scene sceneID="VWg-cV-GzL">
@@ -303,7 +303,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="INs-ZM-mEL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3628" y="360"/>
+            <point key="canvasLocation" x="2751" y="1619"/>
         </scene>
         <!--RecordVC-->
         <scene sceneID="QoI-2S-rVw">
@@ -420,14 +420,21 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="복용하는 약 이름을 입력해주세요." textAlignment="center" minimumFontSize="17" background="Disabled-1" translatesAutoresizingMaskIntoConstraints="NO" id="B9d-gn-nXh">
-                                <rect key="frame" x="40" y="87" width="326" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="복용하는 약 이름을 입력해주세요." textAlignment="center" minimumFontSize="17" background="Image Block" translatesAutoresizingMaskIntoConstraints="NO" id="B9d-gn-nXh">
+                                <rect key="frame" x="52" y="87" width="304" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="복용시작" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nKB-Fg-5lm">
-                                <rect key="frame" x="52" y="143" width="56" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="복용시작일자" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nKB-Fg-5lm">
+                                <rect key="frame" x="52" y="143" width="84" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="효능" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hNK-fN-TBi">
+                                <rect key="frame" x="52" y="286" width="28" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -451,13 +458,19 @@
                                 </state>
                             </button>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="EgA-ut-jzh">
-                                <rect key="frame" x="52" y="223" width="304" height="104"/>
+                                <rect key="frame" x="52" y="174" width="304" height="104"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <locale key="locale" localeIdentifier="ko_KR"/>
                                 <connections>
                                     <action selector="setDatePicker:" destination="qiv-yc-TRm" eventType="valueChanged" id="CyB-RW-xxj"/>
                                 </connections>
                             </datePicker>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="약의 효능을 입력해주세요." textAlignment="center" minimumFontSize="17" background="Image Block" translatesAutoresizingMaskIntoConstraints="NO" id="Tku-Ly-fGR">
+                                <rect key="frame" x="52" y="325" width="304" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="j96-OX-ri0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -465,6 +478,7 @@
                     <connections>
                         <outlet property="cautionTextView" destination="raT-JW-v8L" id="5De-vi-EyF"/>
                         <outlet property="durationDatePicker" destination="EgA-ut-jzh" id="lZX-3i-OaM"/>
+                        <outlet property="effectTextField" destination="Tku-Ly-fGR" id="hwI-6r-p6W"/>
                         <outlet property="nameTextField" destination="B9d-gn-nXh" id="XKA-L5-Vne"/>
                         <outlet property="recordButton" destination="WBK-uE-bCS" id="Z1j-Du-BLN"/>
                     </connections>
@@ -535,6 +549,7 @@
     </scenes>
     <resources>
         <image name="Disabled-1" width="297" height="45"/>
+        <image name="Image Block" width="343" height="198"/>
         <image name="Primary" width="131" height="51"/>
         <image name="Rectangle 239" width="376" height="723"/>
         <image name="Rectangle 240" width="320" height="80"/>

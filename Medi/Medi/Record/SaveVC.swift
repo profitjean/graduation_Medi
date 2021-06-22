@@ -12,6 +12,7 @@ class SaveVC: UIViewController {
     
     @IBOutlet weak var durationDatePicker: UIDatePicker!
     @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var effectTextField: UITextField! // 효능 설명 부분
     @IBOutlet weak var cautionTextView: UITextView!
     @IBOutlet weak var recordButton: UIButton!
     
@@ -55,8 +56,8 @@ extension SaveVC {
     @objc func didTapRecordButton() {
         
         
-        if let medicineName = nameTextField.text, let date = saveDate, let caution = cautionTextView.text {
-            db.collection("Patient").addDocument(data: ["caution": caution,"date":date,"name":medicineName]){ (error) in
+        if let medicineName = nameTextField.text, let date = saveDate, let caution = cautionTextView.text, let purpose = effectTextField.text {
+            db.collection("Patient").addDocument(data: ["caution": caution,"date":date,"name":medicineName,"purpose":purpose]){ (error) in
                 if let e = error {
                     print(e.localizedDescription)
                 } else {

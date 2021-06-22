@@ -29,6 +29,7 @@ class CameraSearchVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setSearchButton()
+        textView.layer.borderColor = UIColor.lightGray.cgColor
         textView.layer.borderWidth = 3.0
         textView.layer.cornerRadius = 8.0
         // Do any additional setup after loading the view.
@@ -37,14 +38,14 @@ class CameraSearchVC: UIViewController {
     @IBAction func takePhoto(_ sender: Any) {
         // 1
         let imagePickerActionSheet =
-            UIAlertController(title: "Snap/Upload Image",
+            UIAlertController(title: "약품 촬영 / 약품 사진 업로드",
                               message: nil,
                               preferredStyle: .actionSheet)
         
         // 2
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
             let cameraButton = UIAlertAction(
-                title: "Take Photo",
+                title: "카메라로 촬영하기",
                 style: .default) { (alert) -> Void in
                 let imagePicker = UIImagePickerController()
                 imagePicker.delegate = self
@@ -59,7 +60,7 @@ class CameraSearchVC: UIViewController {
         
         // 3
         let libraryButton = UIAlertAction(
-            title: "Choose Existing",
+            title: "앨범에서 선택하기",
             style: .default) { (alert) -> Void in
             let imagePicker = UIImagePickerController()
             imagePicker.delegate = self
@@ -72,7 +73,7 @@ class CameraSearchVC: UIViewController {
         imagePickerActionSheet.addAction(libraryButton)
         
         // 4
-        let cancelButton = UIAlertAction(title: "Cancel", style: .cancel)
+        let cancelButton = UIAlertAction(title: "취소", style: .cancel)
         imagePickerActionSheet.addAction(cancelButton)
         
         // 5
@@ -148,7 +149,7 @@ extension CameraSearchVC {
     }
     func setNavigationLayout(){
         navigationController?.navigationItem.backBarButtonItem?.title = " "
-        navigationController?.navigationBar.tintColor = UIColor.black
+        navigationController?.navigationBar.tintColor = UIColor.white
         
         navigationController?.navigationBar.isHidden = false
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)

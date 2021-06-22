@@ -11,4 +11,5 @@ struct User: Codable {
     let caution: String?
     let date: String?
     let name: String?
+    let purpose: String?
 }
