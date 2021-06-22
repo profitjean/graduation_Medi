@@ -96,6 +96,40 @@ extension RecordVC {
 }
 
 extension RecordVC: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            checkings.remove(at: indexPath.row)
+            db.collection("Patient").whereField("\(checkings[indexPath.row].name)", isEqualTo: "\(checkings[indexPath.row].name)").getDocuments { (snapshot, err) in
+                if let err = err {
+                    print("error getting documents")
+                } else {
+                    for document in snapshot!.documents {
+                        if document == document {
+                            self.db.collection("Patient").document("\(document.documentID)").delete() { err in
+                                if let err = err {
+                                    print("error removed")
+                                } else {
+                                    print("successfully removed!")
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+//            let id = db.collection("Patient").document().documentID
+//            print("id\(id)")
+//            db.collection("Patient").document("\(id)").delete() { err in
+//                if let err = err {
+//                    print("err occured \(err)")
+//                } else {
+//                    print("successfully deleted")
+//                }
+//            }
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        } else if editingStyle == .insert {
+            
+        }
+    }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 110
     }
